@@ -4,7 +4,9 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 const Rotas = () => {
     <BrowserRouter>
         <Routes>
-            
+
         </Routes>
     </BrowserRouter>
 }
+
+export default Rotas;
