@@ -13,6 +13,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "sass-development": "sass --watch src/Sass/style.scss:src/css/style.css",
+    "sass-compressed": "sass --watch src/Sass/style.scss:src/css/style.css --style compressed",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
