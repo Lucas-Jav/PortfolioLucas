@@ -1,0 +1,114 @@
+div.container_perfis {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #141414;
+
+    div.header_perfis {
+        background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+        width: 100%;
+        height: 68px;
+        position: absolute;
+    }
+
+    section.section_perfis {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div.content_perfis {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            gap: 30px;
+            margin-bottom: 50px;
+
+            h2 {
+                @include text-style($white, 3.5vw, unset, 0);
+                margin-bottom: 40px;
+
+                @media (max-width: 1440px) {
+                    font-size: 3.2vw;
+                }
+
+                @media (max-width: 1024px) {
+                    font-size: 4.2vw;
+                }
+
+                @media (max-width: 1024px) {
+                    font-size: 5.2vw;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 6.2vw;
+                }
+
+                @media (max-width: 375px) {
+                    font-size: 7.8vw;
+                }
+            }
+
+            div.group_perfis {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+
+                a {
+                    width: min-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+
+                    
+
+                    img {
+                        height: 10vw;
+                        max-height: 200px;
+                        max-width: 200px;
+                        min-height: 120px;
+                        min-width: 120px;
+                        text-decoration: none;
+                        width: 10vw;
+                        border-radius: 4px;
+                    }
+    
+                    span {
+                        @include text-style(#e5e5e5b7, 24px, unset, 1.2em);
+                        padding: 10%;
+                    }
+                }
+
+                a:hover > img {
+                        outline: 3px solid #e5e5e5;
+                }
+
+                a:hover > span {
+                    color: $white;
+                }
+            }
+
+            a.btn_all {
+                background-color: transparent;
+                border: 1px solid $grey;
+                color: $grey;
+                cursor: pointer;
+                display: block;
+                font-size: 23px;
+                letter-spacing: 2px;
+                margin: 2em 0 1em;
+                padding: 0.5em 1.5em;
+
+                &:hover, &:focus {
+                    border: 1px solid $white;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
