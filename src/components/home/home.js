@@ -7,7 +7,7 @@ import FormHome from "./form";
 const Home = () => {
     return (
         <div className="container_home">
-            <img src={BgImg} alt="bg_img" />
+            <img src={BgImg} alt="bg_img" loading="lazy" />
             <div className="shadow"></div>
             <HeaderHome/>
             <FormHome/>

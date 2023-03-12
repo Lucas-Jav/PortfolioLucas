@@ -177,4 +177,116 @@ header.header_home img {
   font-size: inherit;
 }
 
+div.container_perfis {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #141414;
+}
+div.container_perfis div.header_perfis {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+  width: 100%;
+  height: 68px;
+  position: absolute;
+}
+div.container_perfis section.section_perfis {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.container_perfis section.section_perfis div.content_perfis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+div.container_perfis section.section_perfis div.content_perfis h2 {
+  color: #fff;
+  font-size: 3.5vw;
+  font-weight: unset;
+  line-height: 0;
+  margin-bottom: 40px;
+}
+@media (max-width: 1440px) {
+  div.container_perfis section.section_perfis div.content_perfis h2 {
+    font-size: 3.2vw;
+  }
+}
+@media (max-width: 1024px) {
+  div.container_perfis section.section_perfis div.content_perfis h2 {
+    font-size: 4.2vw;
+  }
+}
+@media (max-width: 1024px) {
+  div.container_perfis section.section_perfis div.content_perfis h2 {
+    font-size: 5.2vw;
+  }
+}
+@media (max-width: 500px) {
+  div.container_perfis section.section_perfis div.content_perfis h2 {
+    font-size: 6.2vw;
+  }
+}
+@media (max-width: 375px) {
+  div.container_perfis section.section_perfis div.content_perfis h2 {
+    font-size: 7.8vw;
+  }
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis a {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis a img {
+  height: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 120px;
+  min-width: 120px;
+  text-decoration: none;
+  width: 10vw;
+  border-radius: 4px;
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis a span {
+  color: rgba(229, 229, 229, 0.7176470588);
+  font-size: 24px;
+  font-weight: unset;
+  line-height: 1.2em;
+  padding: 10%;
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis a:hover > img {
+  outline: 3px solid #e5e5e5;
+}
+div.container_perfis section.section_perfis div.content_perfis div.group_perfis a:hover > span {
+  color: #fff;
+}
+div.container_perfis section.section_perfis div.content_perfis a.btn_all {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  cursor: pointer;
+  display: block;
+  font-size: 23px;
+  letter-spacing: 2px;
+  margin: 2em 0 1em;
+  padding: 0.5em 1.5em;
+}
+div.container_perfis section.section_perfis div.content_perfis a.btn_all:hover, div.container_perfis section.section_perfis div.content_perfis a.btn_all:focus {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
