@@ -1,0 +1,145 @@
+.container_home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    div.shadow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(0 0 0 / 40%);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    section.sectionHome {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+
+        div.formHome {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            height: 660px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 4px;
+            padding: 60px 68px 40px;
+            margin-top: 50px;
+
+            @media (max-width: 496px) {
+                padding: 30px 30px 40px;
+            }
+            
+            h2 {
+                color: $white;
+                height: 58px;
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            div.group_inputs {
+                width: 100%;
+                margin: 16px 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                input {
+                    width: 100%;
+                    height: 51px;
+                    background-color: $grenn;
+                    border-radius: 4px;
+                    padding: 16px 28px;
+                    @include text-style($gren-2, 16px, 300, 19px);
+                    border: none;
+                    
+                    &:focus {
+                        outline: 1px solid $white;
+                        color: $white;
+                    }
+                }
+            }
+
+            a.btn_entrar {
+                width: 100%;
+                height: 51px;
+                margin: 16px 0px;
+                border-radius: 4px;
+                @include text-style($white, 16px, 500, 19px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $red-btn;
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    background-color: $red-btn-hover;
+                }
+            }
+
+            div.group_infos {
+                width: 100%;
+                height: 18px;
+                margin-bottom: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                align-items: center;
+                justify-content: space-between;
+
+                div.checkbox {
+                    display: flex;
+                    gap: 4px;
+                    
+                    input[type="checkbox"] {
+                        accent-color: #a9a9a9;
+                    }
+                }
+            }
+
+            span {
+                @include text-style($gren-2, 13px, 300, 15px)
+            }
+
+            div.more_infos {
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                p {
+                    width: 100%;
+                    color: $gren-2;
+
+                    &.p1 {
+                        height: 15px;
+                        @include text-style($gren-2, 13px, 300, 15px)
+                    }
+
+                    &.p2 {
+                        height: 19px;
+                        @include text-style($gren-2, 16px, 300, 19px)
+                    }
+
+                    span {
+                        color: $white;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+}

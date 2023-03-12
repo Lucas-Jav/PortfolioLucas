@@ -1,0 +1,17 @@
+header.header_home {
+    width: 100%;
+    padding: 50px;
+
+    @media (max-width: 425px) {
+        padding: 0;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 146px;
+        height: auto;
+    }
+}

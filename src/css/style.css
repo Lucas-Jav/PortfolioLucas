@@ -1,3 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Golos Text", sans-serif;
+}
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a, button {
+  all: unset;
+}
+
+header.header_home {
+  width: 100%;
+  padding: 50px;
+}
+@media (max-width: 425px) {
+  header.header_home {
+    padding: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+header.header_home img {
+  width: 146px;
+  height: auto;
+}
+
+.container_home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.container_home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.container_home div.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+.container_home section.sectionHome {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+.container_home section.sectionHome div.formHome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 660px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 60px 68px 40px;
+  margin-top: 50px;
+}
+@media (max-width: 496px) {
+  .container_home section.sectionHome div.formHome {
+    padding: 30px 30px 40px;
+  }
+}
+.container_home section.sectionHome div.formHome h2 {
+  color: #fff;
+  height: 58px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.container_home section.sectionHome div.formHome div.group_inputs {
+  width: 100%;
+  margin: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container_home section.sectionHome div.formHome div.group_inputs input {
+  width: 100%;
+  height: 51px;
+  background-color: #333333;
+  border-radius: 4px;
+  padding: 16px 28px;
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  border: none;
+}
+.container_home section.sectionHome div.formHome div.group_inputs input:focus {
+  outline: 1px solid #fff;
+  color: #fff;
+}
+.container_home section.sectionHome div.formHome a.btn_entrar {
+  width: 100%;
+  height: 51px;
+  margin: 16px 0px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e50914;
+  cursor: pointer;
+}
+.container_home section.sectionHome div.formHome a.btn_entrar:hover, .container_home section.sectionHome div.formHome a.btn_entrar:focus {
+  background-color: #a91013;
+}
+.container_home section.sectionHome div.formHome div.group_infos {
+  width: 100%;
+  height: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container_home section.sectionHome div.formHome div.group_infos div.checkbox {
+  display: flex;
+  gap: 4px;
+}
+.container_home section.sectionHome div.formHome div.group_infos div.checkbox input[type=checkbox] {
+  accent-color: #a9a9a9;
+}
+.container_home section.sectionHome div.formHome span {
+  color: #8c8c8c;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.container_home section.sectionHome div.formHome div.more_infos {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container_home section.sectionHome div.formHome div.more_infos p {
+  width: 100%;
+  color: #8c8c8c;
+}
+.container_home section.sectionHome div.formHome div.more_infos p.p1 {
+  height: 15px;
+  color: #8c8c8c;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.container_home section.sectionHome div.formHome div.more_infos p.p2 {
+  height: 19px;
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+.container_home section.sectionHome div.formHome div.more_infos p span {
+  color: #fff;
+  font-size: inherit;
+}
 
 /*# sourceMappingURL=style.css.map */

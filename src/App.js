@@ -1,12 +1,10 @@
 import React from "react";
+import Routers from "./routes";
+import './css/style.css';
 
 
 function App() {
-  return (
-    <div className="Container_all">
-      
-    </div>
-  );
+  return <Routers/>;
 }
 
 export default App;
