@@ -3,7 +3,7 @@ import HeaderSections from "../../headers/header-sections";
 
 
 const About = () => {
-
+    
     return (
         <div className="container_sections">
             <HeaderSections/>

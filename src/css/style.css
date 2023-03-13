@@ -56,29 +56,126 @@ header.header_sections nav {
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
 }
-header.header_sections nav img {
+header.header_sections nav div.navProfiles {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+header.header_sections nav div.navProfiles img {
   height: 30px;
   width: auto;
 }
-header.header_sections nav div.navItems {
+header.header_sections nav div.navProfiles div.navItems {
   display: flex;
   gap: 15px;
 }
-header.header_sections nav div.navItems a {
+header.header_sections nav div.navProfiles div.navItems a {
   color: #e5e5e5;
   cursor: pointer;
   font-size: 14px;
   transition: color 0.4s;
 }
-header.header_sections nav div.navItems a.active {
+header.header_sections nav div.navProfiles div.navItems a.active {
   color: #fff;
   font-weight: 500;
   font-size: 15px;
 }
-header.header_sections nav div.navItems a:not(.active):hover {
+header.header_sections nav div.navProfiles div.navItems a:not(.active):hover {
   color: #b3b3b3;
+}
+header.header_sections nav div.oterList {
+  display: flex;
+  gap: 15px;
+}
+header.header_sections nav div.oterList img {
+  height: 30px;
+  width: auto;
+  border-radius: 4px;
+}
+header.header_sections nav div.oterList div.split-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 8px;
+}
+header.header_sections nav div.oterList div.split-button button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #f9f9f9;
+  font-size: 14px;
+}
+header.header_sections nav div.oterList div.split-button button:nth-child(2) {
+  width: 60px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header.header_sections nav div.oterList div.split-button button span#chevron {
+  transition: transform 367ms cubic-bezier(0.21, 0, 0.07, 1);
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  height: 0;
+  margin-left: 10px;
+  width: 0;
+  font-size: 0;
+}
+header.header_sections nav div.oterList div.split-button button span#chevron.rotate {
+  transform: rotate(180deg);
+}
+header.header_sections nav div.oterList div.split-button div.menu {
+  overflow: hidden;
+  position: absolute;
+  padding: 6px 0px;
+  left: -150px;
+  top: 68px;
+  z-index: 1;
+  width: 200px;
+  translate: 0px -30px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.4s;
+}
+header.header_sections nav div.oterList div.split-button div.menu.open {
+  translate: 0 0;
+  opacity: 1;
+  visibility: visible;
+}
+header.header_sections nav div.oterList div.split-button div.menu button {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding: 0 18px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup img {
+  border-radius: 4px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup span {
+  display: inline-block;
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: pre;
+  width: 100px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup:hover > span {
+  text-decoration: underline;
 }
 
 .container_home {
