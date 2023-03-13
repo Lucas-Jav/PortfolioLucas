@@ -17,6 +17,14 @@ a, button {
   all: unset;
 }
 
+div.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 header.header_home {
   width: 100%;
   padding: 50px;
@@ -35,6 +43,176 @@ header.header_home img {
   height: auto;
 }
 
+header.header_sections {
+  width: 100%;
+  height: 8vh;
+  padding: 0px 50px;
+  position: fixed;
+  z-index: 5;
+  background-color: transparent;
+}
+header.header_sections nav {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header.header_sections nav div.navProfiles {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+header.header_sections nav div.navProfiles img {
+  height: 30px;
+  width: auto;
+}
+header.header_sections nav div.navProfiles div.navItems {
+  display: flex;
+  gap: 15px;
+}
+header.header_sections nav div.navProfiles div.navItems a {
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.4s;
+}
+header.header_sections nav div.navProfiles div.navItems a.active {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+header.header_sections nav div.navProfiles div.navItems a:not(.active):hover {
+  color: #b3b3b3;
+}
+header.header_sections nav div.oterList {
+  display: flex;
+  gap: 15px;
+}
+header.header_sections nav div.oterList img {
+  height: 30px;
+  width: auto;
+  border-radius: 4px;
+}
+header.header_sections nav div.oterList div.split-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 8px;
+}
+header.header_sections nav div.oterList div.split-button button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #f9f9f9;
+  font-size: 14px;
+}
+header.header_sections nav div.oterList div.split-button button:nth-child(2) {
+  width: 60px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header.header_sections nav div.oterList div.split-button button span#chevron {
+  transition: transform 367ms cubic-bezier(0.21, 0, 0.07, 1);
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  height: 0;
+  margin-left: 10px;
+  width: 0;
+  font-size: 0;
+}
+header.header_sections nav div.oterList div.split-button button span#chevron.rotate {
+  transform: rotate(180deg);
+}
+header.header_sections nav div.oterList div.split-button div.menu {
+  overflow: hidden;
+  position: absolute;
+  padding: 6px 0px;
+  left: -150px;
+  top: 68px;
+  z-index: 1;
+  width: 200px;
+  translate: 0px -30px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.4s;
+}
+header.header_sections nav div.oterList div.split-button div.menu.open {
+  translate: 0 0;
+  opacity: 1;
+  visibility: visible;
+}
+header.header_sections nav div.oterList div.split-button div.menu button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 18px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup img {
+  border-radius: 4px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup span {
+  display: inline-block;
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: pre;
+  width: 100px;
+}
+header.header_sections nav div.oterList div.split-button div.menu button a.profilesGroup:hover > span {
+  text-decoration: underline;
+}
+header.header_sections nav .burger {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+}
+header.header_sections nav .burger input {
+  display: none;
+}
+header.header_sections nav .burger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+header.header_sections nav .burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+header.header_sections nav .burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+header.header_sections nav .burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
 .container_home {
   width: 100%;
   height: 100vh;
@@ -45,13 +223,6 @@ header.header_home img {
   height: 100%;
   object-fit: cover;
   position: absolute;
-}
-.container_home div.shadow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 .container_home section.sectionHome {
   width: 100%;
@@ -75,6 +246,7 @@ header.header_home img {
 @media (max-width: 496px) {
   .container_home section.sectionHome div.formHome {
     padding: 30px 30px 40px;
+    margin-top: 30px;
   }
 }
 .container_home section.sectionHome div.formHome h2 {
@@ -287,6 +459,49 @@ div.container_perfis section.section_perfis div.content_perfis a.btn_all {
 div.container_perfis section.section_perfis div.content_perfis a.btn_all:hover, div.container_perfis section.section_perfis div.content_perfis a.btn_all:focus {
   border: 1px solid #fff;
   color: #fff;
+}
+
+div.container_sections {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  background-color: grey;
+}
+div.container_sections div.menuContentBurguer {
+  position: fixed;
+  display: flex;
+  height: 94vh;
+  opacity: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: rgb(20, 20, 20);
+  right: -100%;
+  z-index: 6;
+}
+div.container_sections div.menuContentBurguer.animationMenu {
+  animation: easeIn 1s forwards;
+}
+@keyframes easeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+div.container_sections div.menuContentBurguer.closeBurger {
+  animation: easeOut 1s forwards;
+}
+@keyframes easeOut {
+  0% {
+    opacity: 1;
+    right: 0;
+  }
+  100% {
+    opacity: 0;
+    right: -100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

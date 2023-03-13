@@ -1,0 +1,47 @@
+div.container_sections {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    background-color: $grey;
+
+    div.menuContentBurguer {
+        position: fixed;
+        display: flex;
+        height: 94vh;
+        opacity: 0;
+        bottom: 0;
+        width: 320px;
+        background-color: $bg-color;
+        right: -100%;
+        z-index: 6;
+
+        &.animationMenu {
+            animation: easeIn 1s forwards;
+
+            @keyframes easeIn {
+                0% {
+                    opacity: 0.1;
+                }
+                100% {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+
+        &.closeBurger {
+            animation: easeOut 1s forwards;
+
+            @keyframes easeOut {
+                0% {
+                    opacity: 1;
+                    right: 0;
+                }
+                100% {
+                    opacity: 0;
+                    right: -100%;
+                }
+            }
+        }
+    }
+}
