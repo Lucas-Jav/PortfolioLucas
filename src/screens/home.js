@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Home from "../components/home/home";
+import Home from "../components/home/index";
 
 const HomeScreen = () => {
     return (

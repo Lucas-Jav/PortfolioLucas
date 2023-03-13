@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import aboutImg from "./about.png";
-import skillsImg from "./skills.png";
-import worksImg from "./works.png";
-import contractImg from "./contract.png";
+import aboutImg from "../../../images/about.png";
+import skillsImg from "../../../images/skills.png";
+import worksImg from "../../../images/works.png";
+import contractImg from "../../../images/contract.png";
+import euImg from "../../../images/eu.png"
 
 const DropSearch = () => {
     const toggleDropdown = () => {
@@ -29,7 +30,7 @@ const DropSearch = () => {
         <div className="oterList">
             <div className="split-button" >
                 <button>
-                    <img src={aboutImg} alt="sla"></img>
+                    <img src={euImg} alt="img-eu"></img>
                 </button>
                 <button onClick={toggleDropdown}>
                     <span id="chevron">
@@ -38,6 +39,7 @@ const DropSearch = () => {
                 </button>
                 <div id="menu" className="menu">
                     <button onClick={toggleDropdown}>
+                        <Profiles path="/about" img={aboutImg} title="About"/>
                         <Profiles path="/skills" img={skillsImg} title="Skills"/>
                         <Profiles path="/works" img={worksImg} title="Works"/>
                         <Profiles path="/contract" img={contractImg} title="Contract"/>

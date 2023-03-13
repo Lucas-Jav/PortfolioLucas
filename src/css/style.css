@@ -25,6 +25,11 @@ div.shadow {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 
+::selection {
+  color: none;
+  background-color: none;
+}
+
 header.header_home {
   width: 100%;
   padding: 50px;
@@ -179,7 +184,7 @@ header.header_sections nav div.oterList div.split-button div.menu button a.profi
 header.header_sections nav .burger {
   position: relative;
   width: 30px;
-  height: 25px;
+  height: 20px;
   background: transparent;
   cursor: pointer;
 }
@@ -470,16 +475,27 @@ div.container_sections {
 div.container_sections div.menuContentBurguer {
   position: fixed;
   display: flex;
-  height: 94vh;
+  flex-direction: column;
+  gap: 10px;
+  height: 94%;
+  padding: 15px;
   opacity: 0;
   bottom: 0;
   width: 320px;
   background-color: rgb(20, 20, 20);
   right: -100%;
-  z-index: 6;
+  z-index: 2;
+}
+@media (max-width: 425px) {
+  div.container_sections div.menuContentBurguer {
+    width: 100%;
+  }
+}
+div.container_sections div.menuContentBurguer h2 {
+  color: #f9f9f9;
 }
 div.container_sections div.menuContentBurguer.animationMenu {
-  animation: easeIn 1s forwards;
+  animation: easeIn 0.5s forwards;
 }
 @keyframes easeIn {
   0% {
@@ -491,7 +507,7 @@ div.container_sections div.menuContentBurguer.animationMenu {
   }
 }
 div.container_sections div.menuContentBurguer.closeBurger {
-  animation: easeOut 1s forwards;
+  animation: easeOut 0.5s forwards;
 }
 @keyframes easeOut {
   0% {
@@ -502,6 +518,45 @@ div.container_sections div.menuContentBurguer.closeBurger {
     opacity: 0;
     right: -100%;
   }
+}
+div.container_sections div.menuContentBurguer div.profilesBurger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border-radius: 4px;
+  color: grey;
+  border: 1px solid grey;
+}
+@media (max-width: 425px) {
+  div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup {
+    width: 270px;
+  }
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup img {
+  height: 60px;
+  border-radius: 4px;
+  width: auto;
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+div.container_sections div.menuContentBurguer div.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+div.container_sections div.menuContentBurguer div.footer span {
+  text-align: center;
+  color: #f9f9f9;
 }
 
 /*# sourceMappingURL=style.css.map */

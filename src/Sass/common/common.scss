@@ -32,3 +32,8 @@ div.shadow {
     font-weight: $font-weight;
     line-height: $line-height;
 }
+
+::selection {
+    color: none;
+    background-color: none;
+}

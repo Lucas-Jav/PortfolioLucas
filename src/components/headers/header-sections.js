@@ -44,7 +44,7 @@ const HeaderSections = () => {
 
                 setTimeout(() => {
                     menu.classList.remove("closeBurger");
-                }, 1000);
+                }, 500);
             }
         }
 
