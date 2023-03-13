@@ -10,14 +10,6 @@
         position: absolute;
     }
 
-    div.shadow {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: rgb(0 0 0 / 40%);
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
-    }
-
     section.sectionHome {
         width: 100%;
         height: auto;
@@ -39,6 +31,7 @@
 
             @media (max-width: 496px) {
                 padding: 30px 30px 40px;
+                margin-top: 30px;
             }
             
             h2 {

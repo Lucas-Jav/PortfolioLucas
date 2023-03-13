@@ -15,3 +15,47 @@ header.header_home {
         height: auto;
     }
 }
+
+header.header_sections {
+    width: 100%;
+    height: 8vh;
+    padding: 0px 50px;
+    position: fixed;
+    z-index: 5;
+    background-color: transparent;
+
+    nav {
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        img {
+            height: 30px;
+            width: auto;
+        }
+
+        div.navItems {
+            display: flex;
+            gap: 15px;
+
+            a {
+                color: $link-color;
+                cursor: pointer;
+                font-size: 14px;
+                transition: color .4s;
+
+                &.active {
+                    color: $white;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+
+                &:not(.active):hover {
+                    color: $link-color-hover;
+                }
+            }
+        }
+    }
+}

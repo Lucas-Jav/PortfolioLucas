@@ -19,7 +19,7 @@ const FormHome = () => {
                     <span>Precisa de ajuda?</span>
                 </div>
                 <div className="more_infos">
-                    <p className="p1">Conectar-se agora grátis</p>
+                    <p className="p1">Faça o login simples</p>
                     <p className="p2">Novo por aqui? <span>Bem vindo.</span></p>
                     <p className="p3">Esta página foi criada e desenvolvida por <span>@lucas_oliveira. </span>
                     Espero que goste, e se divirta.

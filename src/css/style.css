@@ -17,6 +17,14 @@ a, button {
   all: unset;
 }
 
+div.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 header.header_home {
   width: 100%;
   padding: 50px;
@@ -35,6 +43,44 @@ header.header_home img {
   height: auto;
 }
 
+header.header_sections {
+  width: 100%;
+  height: 8vh;
+  padding: 0px 50px;
+  position: fixed;
+  z-index: 5;
+  background-color: transparent;
+}
+header.header_sections nav {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header.header_sections nav img {
+  height: 30px;
+  width: auto;
+}
+header.header_sections nav div.navItems {
+  display: flex;
+  gap: 15px;
+}
+header.header_sections nav div.navItems a {
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.4s;
+}
+header.header_sections nav div.navItems a.active {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+header.header_sections nav div.navItems a:not(.active):hover {
+  color: #b3b3b3;
+}
+
 .container_home {
   width: 100%;
   height: 100vh;
@@ -45,13 +91,6 @@ header.header_home img {
   height: 100%;
   object-fit: cover;
   position: absolute;
-}
-.container_home div.shadow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 .container_home section.sectionHome {
   width: 100%;
@@ -75,6 +114,7 @@ header.header_home img {
 @media (max-width: 496px) {
   .container_home section.sectionHome div.formHome {
     padding: 30px 30px 40px;
+    margin-top: 30px;
   }
 }
 .container_home section.sectionHome div.formHome h2 {
@@ -287,6 +327,13 @@ div.container_perfis section.section_perfis div.content_perfis a.btn_all {
 div.container_perfis section.section_perfis div.content_perfis a.btn_all:hover, div.container_perfis section.section_perfis div.content_perfis a.btn_all:focus {
   border: 1px solid #fff;
   color: #fff;
+}
+
+div.container_sections {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  background-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */
