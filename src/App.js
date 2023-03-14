@@ -3,7 +3,7 @@ import Routers from "./routes";
 import './css/style.css';
 
 
-function App() {
+const App = () => {
   return <Routers/>;
 }
 
