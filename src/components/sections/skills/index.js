@@ -3,23 +3,9 @@ import HeaderSections from "../../headers/header-sections";
 import bgimg from "../../../images/imgSkill.png"
 import iconGit from "../../../images/github.png"
 import iconTime from '../../../images/wakatime.png';
+import { ButtonsFiles, Imgbg } from "../commons";
 
 const Skill = () => {
-    const ButtonsFiles = (props) => {
-        return (
-            <a href={props.file} rel={props.file} target={props.target}>
-                <img src={props.img} alt="file-icon" loading="lazy"></img>
-                {props.text}
-            </a>
-        )
-    }
-
-    const Imgbg = (props) => {
-        if (window.screen.width >= 1024) {
-            return <img src={props.img} alt="bg" className="bg_img"></img>;
-        }
-    }
-
 
     return (
         <div className="container_sections">
