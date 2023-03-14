@@ -32,3 +32,16 @@ div.shadow {
     font-weight: $font-weight;
     line-height: $line-height;
 }
+
+*::selection {
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;  
+}
+
+p, h1, h2,
+h3, h4, h5,
+h6, span {
+    cursor: default;
+}

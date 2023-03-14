@@ -4,11 +4,11 @@ import DropSearch from "./items/dropdow_search";
 import ContentMenu from "./items/menuBgContent";
 import logoPort from "./logo.png";
 
-const HeaderSections = () => {
+const HeaderSections = (props) => {
 
     window.onscroll = () => {
         let currentScrrol = window.pageYOffset;
-
+        
         if (currentScrrol < 1) {
             document.querySelector(".header_sections").style.background = "transparent";
         } else {
@@ -16,16 +16,47 @@ const HeaderSections = () => {
         }
     }
 
-    const NavItems = () => {
+    const NavItems = (props) => {
         if (window.screen.width >= 768) {
-            return (
-                <div className="navItems">
-                    <Link to="/about" className="active">About</Link>
-                    <Link to="/skills">Skills</Link>
-                    <Link to="/works">Works</Link>
-                    <Link to="/contract">Contract</Link>
-                </div>
-            )
+            
+            if (props.selection === "about") {
+                return (
+                    <div className="navItems">
+                        <Link to="/about" className="active">About</Link>
+                        <Link to="/skills">Skills</Link>
+                        <Link to="/works">Works</Link>
+                        <Link to="/contract">Contract</Link>
+                    </div>
+                )
+            } else if (props.selection === "skills") {
+                return (
+                    <div className="navItems">
+                        <Link to="/about">About</Link>
+                        <Link to="/skills" className="active">Skills</Link>
+                        <Link to="/works">Works</Link>
+                        <Link to="/contract">Contract</Link>
+                    </div>
+                )
+            } else if (props.selection === "works") {
+                return (
+                    <div className="navItems">
+                        <Link to="/about">About</Link>
+                        <Link to="/skills">Skills</Link>
+                        <Link to="/works" className="active">Works</Link>
+                        <Link to="/contract">Contract</Link>
+                    </div>
+                )
+            } else if (props.selection === "contract") {
+                return (
+                    <div className="navItems">
+                        <Link to="/about">About</Link>
+                        <Link to="/skills">Skills</Link>
+                        <Link to="/works">Works</Link>
+                        <Link to="/contract" className="active">Contract</Link>
+                    </div>
+                )
+            }
+            
         }
     }
 
@@ -37,14 +68,21 @@ const HeaderSections = () => {
             if (burger.value === "close") {
                 menu.classList.add("animationMenu");
                 burger.value = "open";
+                document.querySelector(".header_sections").style.background = "rgb(20, 20, 20)";
             } else {
                 menu.classList.remove("animationMenu");
-                menu.classList.add("closeBurger")
-                burger.value = "close";;
+                menu.classList.add("closeBurger");
+                burger.value = "close";
+
+                let currentScrrol = window.pageYOffset;
+                    
+                if (currentScrrol === 0) {
+                    document.querySelector(".header_sections").style.background = "transparent";
+                }
 
                 setTimeout(() => {
                     menu.classList.remove("closeBurger");
-                }, 1000);
+                }, 500);
             }
         }
 
@@ -68,7 +106,7 @@ const HeaderSections = () => {
                 <nav>
                     <div className="navProfiles">
                         <img src={logoPort} alt="logo"></img>
-                        <NavItems />
+                        <NavItems selection={props.selection}/>
                     </div>
                     <MenuBar />
                 </nav>

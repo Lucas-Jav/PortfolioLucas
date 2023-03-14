@@ -1,9 +1,9 @@
 import React from "react";
 import CardProfile from "./cards";
-import sobreImg from "./about.png";
-import skillsImg from "./skills.png";
-import worksImg from "./works.png"
-import contractImg from "./contract.png";
+import sobreImg from "../../images/about.png";
+import skillsImg from "../../images/skills.png";
+import worksImg from "../../images/works.png"
+import contractImg from "../../images/contract.png";
 import { Link } from "react-router-dom";
 
 const Perfis = () => {

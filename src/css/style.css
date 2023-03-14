@@ -25,6 +25,19 @@ div.shadow {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 
+*::selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p, h1, h2,
+h3, h4, h5,
+h6, span {
+  cursor: default;
+}
+
 header.header_home {
   width: 100%;
   padding: 50px;
@@ -179,7 +192,7 @@ header.header_sections nav div.oterList div.split-button div.menu button a.profi
 header.header_sections nav .burger {
   position: relative;
   width: 30px;
-  height: 25px;
+  height: 20px;
   background: transparent;
   cursor: pointer;
 }
@@ -463,23 +476,114 @@ div.container_perfis section.section_perfis div.content_perfis a.btn_all:hover, 
 
 div.container_sections {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   position: relative;
   background-color: grey;
+}
+div.container_sections div.shadow {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, #000 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+div.container_sections div.imgBg {
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+}
+div.container_sections div.imgBg img.bg_img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  object-position: center;
+}
+div.container_sections div.imgBg div.aboutPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  color: #f9f9f9;
+  z-index: 3;
+  margin: 0px 50px 120px 50px;
+}
+@media (max-width: 800px) {
+  div.container_sections div.imgBg div.aboutPage {
+    margin: 0px;
+    padding: 20px;
+  }
+}
+div.container_sections div.imgBg div.aboutPage h1 {
+  font-size: 45px;
+}
+div.container_sections div.imgBg div.aboutPage p {
+  text-indent: 5px;
+  width: 700px;
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  div.container_sections div.imgBg div.aboutPage p {
+    width: 100%;
+  }
+}
+div.container_sections div.imgBg div.aboutPage span {
+  color: #fff;
+  text-indent: 5px;
+  opacity: 0.8;
+}
+div.container_sections div.imgBg div.aboutPage div.groupBtn {
+  display: flex;
+  gap: 10px;
+}
+div.container_sections div.imgBg div.aboutPage div.groupBtn a {
+  border: 1px solid grey;
+  position: relative;
+  color: grey;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: max-content;
+  padding: 10px 10px;
+}
+div.container_sections div.imgBg div.aboutPage div.groupBtn a img {
+  width: 30px;
+  position: relative;
+}
+div.container_sections div.imgBg div.aboutPage div.groupBtn a:hover {
+  border-color: #fff;
+  color: #fff;
 }
 div.container_sections div.menuContentBurguer {
   position: fixed;
   display: flex;
-  height: 94vh;
+  flex-direction: column;
+  gap: 10px;
+  height: 94%;
+  padding: 15px;
   opacity: 0;
   bottom: 0;
   width: 320px;
   background-color: rgb(20, 20, 20);
   right: -100%;
-  z-index: 6;
+  z-index: 4;
+}
+@media (max-width: 425px) {
+  div.container_sections div.menuContentBurguer {
+    width: 100%;
+  }
+}
+div.container_sections div.menuContentBurguer h2 {
+  color: #f9f9f9;
 }
 div.container_sections div.menuContentBurguer.animationMenu {
-  animation: easeIn 1s forwards;
+  animation: easeIn 0.5s forwards;
 }
 @keyframes easeIn {
   0% {
@@ -491,7 +595,7 @@ div.container_sections div.menuContentBurguer.animationMenu {
   }
 }
 div.container_sections div.menuContentBurguer.closeBurger {
-  animation: easeOut 1s forwards;
+  animation: easeOut 0.5s forwards;
 }
 @keyframes easeOut {
   0% {
@@ -502,6 +606,46 @@ div.container_sections div.menuContentBurguer.closeBurger {
     opacity: 0;
     right: -100%;
   }
+}
+div.container_sections div.menuContentBurguer div.profilesBurger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border-radius: 4px;
+  color: grey;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+@media (max-width: 425px) {
+  div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup {
+    width: 270px;
+  }
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup img {
+  height: 60px;
+  border-radius: 4px;
+  width: auto;
+}
+div.container_sections div.menuContentBurguer div.profilesBurger a.profilesGroup:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+div.container_sections div.menuContentBurguer div.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+div.container_sections div.menuContentBurguer div.footer span {
+  text-align: center;
+  color: #f9f9f9;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderHome from "../headers/header-home";
-import BgImg from "./backgound-img.jpg";
+import BgImg from "../../images/backgound-img.jpg";
 import FormHome from "./form";
 
 
