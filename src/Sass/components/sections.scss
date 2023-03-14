@@ -71,9 +71,9 @@ div.container_sections {
                 gap: 10px;
 
                 a {
-                    border: 1px solid $grey;
+                    border: 1px solid $white;
                     position: relative;
-                    color: $grey;
+                    color: $white;
                     border-radius: 6px;
                     display: flex;
                     align-items: center;
@@ -88,8 +88,7 @@ div.container_sections {
                     }
 
                     &:hover {
-                        border-color: $white;
-                        color: $white;
+                        background-color: rgba(0,0,0,0.5);
                     }
                 }
 
