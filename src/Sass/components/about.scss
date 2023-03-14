@@ -66,6 +66,7 @@ div.container_sections {
 
             div.groupBtn {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 10px;
 
                 a {

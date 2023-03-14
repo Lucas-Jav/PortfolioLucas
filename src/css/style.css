@@ -538,6 +538,7 @@ div.container_sections div.imgBg div.aboutPage span {
 }
 div.container_sections div.imgBg div.aboutPage div.groupBtn {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 div.container_sections div.imgBg div.aboutPage div.groupBtn a {
