@@ -11,23 +11,9 @@ import portLari from "../../../images/portfolio.png"
 import euPort from "../../../images/lucasPort.png"
 import noneProject from "../../../images/nenhumProj.png"
 import file from "../../../images/cvImg.png"
+import { ButtonsFiles, Imgbg } from "../commons";
 
 const Works = () => {
-    const ButtonsFiles = (props) => {
-        return (
-            <a href={props.file} rel={props.file} target={props.target}>
-                <img src={props.img} alt="file-icon" loading="lazy"></img>
-                {props.text}
-            </a>
-        )
-    }
-
-    const Imgbg = (props) => {
-        if (window.screen.width >= 1024) {
-            return <img src={props.img} alt="bg" className="bg_img"></img>;
-        }
-    }
-
     const Item = (props) => {
         return (
             <Link to={props.local} className="carrosel-item" target="_blank">
