@@ -19,7 +19,7 @@ const Perfis = () => {
                         <CardProfile to="/works" img={worksImg} title="Works" />
                         <CardProfile to="/contract" img={contractImg} title="Contract" />
                     </div>
-                    <Link to="/profiles" className="btn_all">Ver tudo</Link>
+                    <Link to="/" className="btn_all">Sair</Link>
                 </div>
             </section>
         </div>
