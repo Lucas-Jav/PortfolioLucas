@@ -5,22 +5,9 @@ import linkedinImg from "../../../images/linkedin.png"
 import emailImg from "../../../images/email.png"
 import wppImg from "../../../images/whatsapp.png"
 import gitImg from "../../../images/github.png"
+import { ButtonsFiles, Imgbg } from "../commons";
 
 const Contract = () => {
-    const ButtonsFiles = (props) => {
-        return (
-            <a href={props.file} rel={props.file} target={props.target}>
-                <img src={props.img} alt="file-icon" loading="lazy"></img>
-                {props.text}
-            </a>
-        )
-    }
-
-    const Imgbg = (props) => {
-        if (window.screen.width >= 1024) {
-            return <img src={props.img} alt="bg" className="bg_img"></img>;
-        }
-    }
 
     return (
         <div className="container_sections">

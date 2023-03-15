@@ -12,7 +12,7 @@ const Perfis = () => {
             <div className="header_perfis"></div>
             <section className="section_perfis">
                 <div className="content_perfis">
-                    <h2>Escolha uma sessão?</h2>
+                    <h2>Escolha uma seção!</h2>
                     <div className="group_perfis">
                         <CardProfile to="/about" img={sobreImg} title="About" />
                         <CardProfile to="/skills" img={skillsImg} title="Skills" />
