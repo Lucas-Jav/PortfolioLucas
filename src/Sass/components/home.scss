@@ -33,6 +33,15 @@
                 padding: 30px 30px 40px;
                 margin-top: 30px;
             }
+
+            @media (max-height: 830px) {
+                height: auto;
+                padding: 30px 45px;
+            }
+
+            @media (max-height: 720px) {
+                margin-top: 15px;
+            }
             
             h2 {
                 color: $white;
