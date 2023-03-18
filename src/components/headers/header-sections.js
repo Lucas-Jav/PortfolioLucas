@@ -22,37 +22,37 @@ const HeaderSections = (props) => {
             if (props.selection === "about") {
                 return (
                     <div className="navItems">
-                        <Link to="/about" className="active">About</Link>
-                        <Link to="/skills">Skills</Link>
-                        <Link to="/works">Works</Link>
-                        <Link to="/contract">Contract</Link>
+                        <Link to="/profiles/about" className="active">About</Link>
+                        <Link to="/profiles/skills">Skills</Link>
+                        <Link to="/profiles/works">Works</Link>
+                        <Link to="/profiles/contract">Contract</Link>
                     </div>
                 )
             } else if (props.selection === "skills") {
                 return (
                     <div className="navItems">
-                        <Link to="/about">About</Link>
-                        <Link to="/skills" className="active">Skills</Link>
-                        <Link to="/works">Works</Link>
-                        <Link to="/contract">Contract</Link>
+                        <Link to="/profiles/about">About</Link>
+                        <Link to="/profiles/skills" className="active">Skills</Link>
+                        <Link to="/profiles/works">Works</Link>
+                        <Link to="/profiles/contract">Contract</Link>
                     </div>
                 )
             } else if (props.selection === "works") {
                 return (
                     <div className="navItems">
-                        <Link to="/about">About</Link>
-                        <Link to="/skills">Skills</Link>
-                        <Link to="/works" className="active">Works</Link>
-                        <Link to="/contract">Contract</Link>
+                        <Link to="/profiles/about">About</Link>
+                        <Link to="/profiles/skills">Skills</Link>
+                        <Link to="/profiles/works" className="active">Works</Link>
+                        <Link to="/profiles/contract">Contract</Link>
                     </div>
                 )
             } else if (props.selection === "contract") {
                 return (
                     <div className="navItems">
-                        <Link to="/about">About</Link>
-                        <Link to="/skills">Skills</Link>
-                        <Link to="/works">Works</Link>
-                        <Link to="/contract" className="active">Contract</Link>
+                        <Link to="/profiles/about">About</Link>
+                        <Link to="/profiles/skills">Skills</Link>
+                        <Link to="/profiles/works">Works</Link>
+                        <Link to="/profiles/contract" className="active">Contract</Link>
                     </div>
                 )
             }

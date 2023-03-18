@@ -39,10 +39,10 @@ const DropSearch = () => {
                 </button>
                 <div id="menu" className="menu">
                     <button onClick={toggleDropdown}>
-                        <Profiles path="/about" img={aboutImg} title="About"/>
-                        <Profiles path="/skills" img={skillsImg} title="Skills"/>
-                        <Profiles path="/works" img={worksImg} title="Works"/>
-                        <Profiles path="/contract" img={contractImg} title="Contract"/>
+                        <Profiles path="/profiles/about" img={aboutImg} title="About"/>
+                        <Profiles path="/profiles/skills" img={skillsImg} title="Skills"/>
+                        <Profiles path="/profiles/works" img={worksImg} title="Works"/>
+                        <Profiles path="/profiles/contract" img={contractImg} title="Contract"/>
                         <Link to="/profiles">Voltar</Link>
                         <Link to="/">Sair</Link>
                     </button>

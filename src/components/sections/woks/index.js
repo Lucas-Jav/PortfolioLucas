@@ -16,13 +16,13 @@ import { ButtonsFiles, Imgbg } from "../commons";
 const Works = () => {
     const Item = (props) => {
         return (
-            <Link to={props.local} className="carrosel-item" target="_blank">
+            <Link to={props.local ?? "/profiles/works/404"} className="carrosel-item" target={props.local ? "_blank" : ""}>
                 <div className="header-carrosel">
-                    <img src={props.img} alt="pokedex-img"></img>
+                    <img src={props.img ?? noneProject} alt="pokedex-img"></img>
                 </div>
                 <div className="body-carrosel">
-                    <h3>{props.title}</h3>
-                    <span>{props.description}</span>
+                    <h3>{props.title ?? "?"}</h3>
+                    <span>{props.description ?? "???"}</span>
                     <button>Ver Projeto</button>
                 </div>
             </Link>
@@ -83,12 +83,12 @@ const Works = () => {
                     <Item img={calcImg} title="Calculadora" description="HTML, CSS, JS" local="https://lucas-jav.github.io/calculadora.js/" />
                     <Item img={portLari} title="Freelancer" description="HTML, Sass, Bootstrap" local="https://lucas-jav.github.io/portifolio-larissa/" />
                     <Item img={euPort} title="Portfólio" description="React.js, JS, Sass" local="/" />
-                    <Item img={noneProject} title="?" description="???" local="" />
-                    <Item img={noneProject} title="?" description="???" local="" />
-                    <Item img={noneProject} title="?" description="???" local="" />
-                    <Item img={noneProject} title="?" description="???" local="" />
-                    <Item img={noneProject} title="?" description="???" local="" />
-                    <Item img={noneProject} title="?" description="???" local="" />
+                    <Item/>
+                    <Item/>
+                    <Item/>
+                    <Item/>
+                    <Item/>
+                    <Item/>
                 </div>
             </div>
         </div>
