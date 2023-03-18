@@ -9,11 +9,14 @@ const Routers = () => (
         <Routes>
             <Route exact path="/" element={<HomeScreen/>} />
             <Route exact path="/profiles" element={<PerfisScreen/>}/>
-            <Route exact path="/about" element={<AboutScreen/>}/>
-            <Route exact path="/skills" element={<SkillScreen/>}/>
-            <Route exact path="/works" element={<WorksScreen/>}/>
-            <Route exact path="/contract" element={<ContractScreen/>}/>
-            <Route exact path="/404" element={<NotFound/>}/>
+            <Route exact path="/profiles/about" element={<AboutScreen/>}/>
+            <Route exact path="/profiles/skills" element={<SkillScreen/>}/>
+            <Route exact path="/profiles/works" element={<WorksScreen/>}/>
+            <Route exact path="/profiles/works/404" element={<NotFound to="/profiles/works" content="Works"/>}/>
+            <Route exact path="/profiles/contract" element={<ContractScreen/>}/>
+            <Route exact path="/profiles/404" element={<NotFound to="/profiles" content="Profiles"/>}/>
+            <Route exact path="/profiles/*" element={<Navigate to="/profiles/404"/>}/>
+            <Route exact path="/404" element={<NotFound to="/" content="Home"/>}/>
             <Route exact path="*" element={<Navigate to="/404"/>}/>
         </Routes>
     </BrowserRouter>

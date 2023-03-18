@@ -14,10 +14,10 @@ const Perfis = () => {
                 <div className="content_perfis">
                     <h2>Escolha uma seção!</h2>
                     <div className="group_perfis">
-                        <CardProfile to="/about" img={sobreImg} title="About" />
-                        <CardProfile to="/skills" img={skillsImg} title="Skills" />
-                        <CardProfile to="/works" img={worksImg} title="Works" />
-                        <CardProfile to="/contract" img={contractImg} title="Contract" />
+                        <CardProfile to="/profiles/about" img={sobreImg} title="About" />
+                        <CardProfile to="/profiles/skills" img={skillsImg} title="Skills" />
+                        <CardProfile to="/profiles/works" img={worksImg} title="Works" />
+                        <CardProfile to="/profiles/contract" img={contractImg} title="Contract" />
                     </div>
                     <Link to="/" className="btn_all">Sair</Link>
                 </div>

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import HeaderHome from "../components/headers/header-home";
 import { Link } from "react-router-dom";
 
-const NotFound = () => {
+const NotFound = (props) => {
     return (
         <Fragment>
             <section className="notFound">
@@ -11,7 +11,7 @@ const NotFound = () => {
                     <div>
                         <h1>404</h1>
                         <span>Página não encontrada! :(</span>
-                        <Link to="/">Home</Link>
+                        <Link to={props.to}>{props.content}</Link>
                     </div>
                 </div>
             </section>
