@@ -8,6 +8,8 @@ import voltarImg from "../../../images/voltar.png";
 import sairImg from "../../../images/sair.png";
 
 const ContentMenu = () => {
+    const years = new Date().getFullYear()
+
     const Profiles = (props) => {
         return (
             <Link to={props.path} className="profilesGroup">
@@ -26,12 +28,12 @@ const ContentMenu = () => {
                 <Profiles path="/profiles/skills" img={skillsImg} title="Skills" />
                 <Profiles path="/profiles/works" img={worksImg} title="Works" />
                 <Profiles path="/profiles/contract" img={contractImg} title="Contract" />
-                <Profiles path="/profiles/profiles" img={voltarImg} title="Voltar"/>
+                <Profiles path="/profiles" img={voltarImg} title="Voltar"/>
                 <Profiles path="/" img={sairImg} title="Sair"/>
             </div>
             <br></br>
             <div className="footer">
-                <span>&copy; Lucas Oliveira, Todos Direitos Reservados</span>
+                <span>{years} &copy; Lucas Oliveira, Todos Direitos Reservados</span>
             </div>
         </div>
     )

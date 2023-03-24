@@ -6,8 +6,7 @@ import carta from "../../../images/cartaImg.png"
 import { ButtonsFiles, Imgbg } from "../commons";
 
 const About = () => {
-    
-
+    const years = new Date().getFullYear()
 
     return (
         <div className="container_sections">
@@ -17,7 +16,7 @@ const About = () => {
                 <Imgbg img={imgAbout}/>
                 <div className="aboutPage">
                     <h1>Sobre Mim</h1>
-                    <p>Olá, meu nome é Lucas Oliveira, tenho 18 anos, sou um desenvolvedor
+                    <p>Olá, meu nome é Lucas Oliveira, tenho {years - 2004} anos, sou um desenvolvedor
                         Front-End baseado em Minas Gerais, no Brasil! Posso desenvolver sites responsivos a partir do zero e
                         transformá-los em experiências web modernas e fáceis de usar.
                         Transformar minha criatividade e conhecimento em sites tem sido
